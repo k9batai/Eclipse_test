@@ -2,17 +2,11 @@
 public class Variable01 {
 
     public static void main(String[] args) {
-        int num1;
-        String str1;
-        num1 = 10;
-        str1 = "Hello World!";
-        System.out.println(num1);
-        System.out.println(str1);
-
-        num1 = 20;
-        System.out.println(num1);
-
-        int num2 = 30;
-        System.out.println(num2);
+    	 final int LUCKY_NUMBER = 7;
+         String str = "ウェブ　キャンプ之助";
+         System.out.println(str);
+         str = "少年よ大志を抱け";
+         System.out.println(str);
+         System.out.println(LUCKY_NUMBER);
     }
 }
