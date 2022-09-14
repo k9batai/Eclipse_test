@@ -32,6 +32,25 @@ public class Test {
 		int z = x * y;
 		System.out.println(z);
 		
+		x = 5;
+		System.out.println(x * 2);
+		System.out.println(x * 3);
+		System.out.println(x * 4);
 		
+		x = 5;
+		System.out.println(x);
+		System.out.println(x * x);
+		System.out.println(x * x * x);
+		
+		x =4;
+		System.out.println(x / 2);
+		System.out.println(x % 2);
+		
+		x =10;
+		x ++;
+		System.out.println(x);
+		x --;
+		x --;
+		System.out.println(x);
 	}
 }
