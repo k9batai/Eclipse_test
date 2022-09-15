@@ -18,5 +18,7 @@ public class Exercise {
     	    x *= i;
 
     	System.out.println( x );
+    	
+    	
     }
 }
