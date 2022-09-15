@@ -1,24 +1,22 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
 public class Exercise {
     public static void main(String[] args) throws Exception {
-    	for( int i = 0 ; i < 10 ; i++ )
-    	    System.out.print( "SPAM" );
     	
-    	for( int i = 1 ; i <= 9 ; i++ )
-    	    System.out.print( ( 3 * i ) + " " );
-    	
-    	int x = 1;
+    	BufferedReader br = new BufferedReader(
+                new InputStreamReader( System.in ) );
+		
+		int max_value = 0;
 
-    	for( int n = 1 ; n <= 8 ; n++ ) {
-    	    x *= 2;
-    	    System.out.println( "2の" + n + "乗=" + x );
-    	}
-    	
-    	x = 1;
-    	for( int i = 2 ; i <= 7 ; i++ )
-    	    x *= i;
+		for( int i = 0 ; i < 10 ; i++ )
+		{
+		    int value = Integer.parseInt( br.readLine() );
 
-    	System.out.println( x );
-    	
-    	
-    }
+		    if( value > max_value )
+		        max_value = value;
+		}
+
+		System.out.println( "最大値=" + max_value );
+	}
 }
