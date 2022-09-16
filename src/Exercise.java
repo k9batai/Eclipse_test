@@ -7,16 +7,26 @@ public class Exercise {
     	BufferedReader br = new BufferedReader(
                 new InputStreamReader( System.in ) );
 		
-		int max_value = 0;
+		int count = Integer.parseInt( br.readLine() );
 
-		for( int i = 0 ; i < 10 ; i++ )
+		for( int i = 0 ; i < count ; i++ )
+		    System.out.print( "*" );
+		
+		count = Integer.parseInt( br.readLine() );
+
+		for( int i = 0, out = 0 ; i < count ; i++ )
 		{
-		    int value = Integer.parseInt( br.readLine() );
+		    System.out.print( out++ );
 
-		    if( value > max_value )
-		        max_value = value;
+		    if( out > 9 )
+		        out = 0;
 		}
+		
+		int sum = 0;
 
-		System.out.println( "最大値=" + max_value );
+		while( sum <= 100 )
+		    sum += Integer.parseInt( br.readLine() );
+
+		System.out.println( "合計は " + sum );
 	}
 }
