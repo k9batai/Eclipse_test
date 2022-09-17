@@ -1,25 +1,15 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
 public class Exercise4 {
-	public static void main( String[] args ) throws IOException
+	public static void main( String[] args )
 	{
-	    BufferedReader br = new BufferedReader(
-	                            new InputStreamReader( System.in ) );
-
-	    int x = Integer.parseInt( br.readLine() );
-	    int y = Integer.parseInt( br.readLine() );
-	    int z = Integer.parseInt( br.readLine() );
-
-	    System.out.println( MaxValue( x, MaxValue( y, z ) ) );
+	    for( int i = 1 ; i <= 9 ; i++ )
+	        KukuColumn( i );
 	}
 
-	static int MaxValue( int n1, int n2 )
+	static void KukuColumn( int num )
 	{
-	    if( n1 > n2 )
-	        return n1;
-	    else
-	        return n2;
+	    for( int i = 1 ; i <= 9 ; i++ )
+	        System.out.printf( " %2d", num * i );
+
+	    System.out.println();
 	}
 }
