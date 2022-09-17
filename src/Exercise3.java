@@ -9,15 +9,22 @@ public class Exercise3
     	BufferedReader br = new BufferedReader(
                 new InputStreamReader( System.in ) );
 		
-		int     values[] = new int[10];
+    	int     values[] = new int[10];
 
-		for( int i = 0 ; i < 10 ; i++ )
-		    values[i] = Integer.parseInt( br.readLine() );
+    	for( int i = 0 ; i < 10 ; i++ )
+    	    values[i] = Integer.parseInt( br.readLine() );
 
-		System.out.println();
+    	System.out.print( "\n偶数：" );
 
-		for( int i = 9 ; i >= 0 ; i-- )
-		    System.out.println( values[i] );
+    	for( int n : values )
+    	    if( ( n % 2 ) == 0 )
+    	        System.out.print( n + " " );
+
+    	System.out.print( "\n奇数：" );
+
+    	for( int n : values )
+    	    if( ( n % 2 ) != 0 )
+    	        System.out.print( n + " " );
         
     }
     
