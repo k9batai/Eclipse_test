@@ -10,22 +10,16 @@ public class Exercise3
                 new InputStreamReader( System.in ) );
 		
     	int     values[] = new int[10];
+    	int     cnt, sum;
 
-    	for( int i = 0 ; i < 10 ; i++ )
-    	    values[i] = Integer.parseInt( br.readLine() );
+    	for( cnt = 0, sum = 0 ; cnt < 10 && sum <= 100 ; cnt++ )
+    	{
+    	    values[cnt] = Integer.parseInt( br.readLine() );
+    	    sum += values[cnt];
+    	}
 
-    	System.out.print( "\n偶数：" );
-
-    	for( int n : values )
-    	    if( ( n % 2 ) == 0 )
-    	        System.out.print( n + " " );
-
-    	System.out.print( "\n奇数：" );
-
-    	for( int n : values )
-    	    if( ( n % 2 ) != 0 )
-    	        System.out.print( n + " " );
-        
+    	for( int i = 0 ; i < cnt ; i ++ )
+    	    System.out.print( "\n" + values[i] );
     }
     
     
