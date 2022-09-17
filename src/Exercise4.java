@@ -1,14 +1,25 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Exercise4 {
-	public static void main( String[] args )
-	
+	public static void main( String[] args ) throws IOException
 	{
-	System.out.println( "4と9の平均=" + average( 4, 9 ) );
+	    BufferedReader br = new BufferedReader(
+	                            new InputStreamReader( System.in ) );
+
+	    int x = Integer.parseInt( br.readLine() );
+	    int y = Integer.parseInt( br.readLine() );
+	    int z = Integer.parseInt( br.readLine() );
+
+	    System.out.println( MaxValue( x, MaxValue( y, z ) ) );
 	}
 
-	static int average( int x, int y )
+	static int MaxValue( int n1, int n2 )
 	{
-	    return ( x + y ) / 2;
+	    if( n1 > n2 )
+	        return n1;
+	    else
+	        return n2;
 	}
-
 }
