@@ -20,6 +20,16 @@ public class Exercise3
 
     	for( int i = 0 ; i < cnt ; i ++ )
     	    System.out.print( "\n" + values[i] );
+    	
+    	int value = Integer.parseInt( br.readLine() );
+
+    	int binary[] = new int[16];
+
+    	for( int i = 15 ; i >= 0 ; i--, value /= 2 )
+    	    binary[i] = value % 2;
+
+    	for( int i = 0 ; i < 16 ; i++ )
+    	    System.out.print( binary[i] );
     }
     
     
