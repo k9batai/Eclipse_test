@@ -1,20 +1,17 @@
 public class Exercise4 {
 	public static void main( String[] args )
 	{
-	    for( int n = 10000 ; n < 10100 ; n++ )
-	        if( IsPrimeNumber( n ) )
-	            System.out.print( n + " " );
+	    for( int n = 11 ; n <= 20 ; n++ )
+	        System.out.print( Fibonacci( n ) + " " );
 	}
 
-	static boolean IsPrimeNumber( int num )
+	static int Fibonacci( int n )
 	{
-	    if( num <= 3 )
-	        return true;
-
-	    for( int i = 2 ; i <= ( num / 2 ) ; i++ )
-	        if( ( num % i) == 0 )
-	            return false;
-
-	    return true;
+	    if( n == 0 )
+	        return 0;
+	    else if( n == 1 )
+	        return 1;
+	    else
+	        return Fibonacci( n - 2 ) + Fibonacci( n - 1 );
 	}
 }
