@@ -31,7 +31,6 @@ public class Exercise5
     {
         Dog MyDog1 = new Dog("秋田県");
        
-
         MyDog1.SetName( "ぽち" );
         MyDog1.SetAge( 3 );
         MyDog1.ShowProfile();
