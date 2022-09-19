@@ -23,10 +23,14 @@ public class Exercise5
 {
     public static void main( String[] args )
     {
-        Dog MyDog = new Dog();
+        Dog MyDog1 = new Dog();
+        Dog MyDog2 = new Dog();
 
-        MyDog.SetName( "ぽち" );
-        MyDog.SetAge( 3 );
-        MyDog.ShowProfile();
+        MyDog1.SetName( "ぽち" );
+        MyDog1.SetAge( 3 );
+        MyDog2.SetName("ジョン");
+        MyDog2.SetAge(4);
+        MyDog1.ShowProfile();
+        MyDog2.ShowProfile();
     }
 }
