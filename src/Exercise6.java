@@ -56,7 +56,33 @@ class CoinCase
 
         return 0;
     }
+    
+    public int GetCount()
+    {
+        return Yen500 + Yen100 + Yen50 + Yen10 + Yen5 + Yen1;
+    }
 
+    public int GetAmount( int kind )
+    {
+        switch( kind )
+        {
+            case 500:
+                return Yen500 * 500;
+            case 100:
+                return Yen100 * 100;
+            case 50:
+                return Yen50 * 50;
+            case 10:
+                return Yen10 * 10;
+            case 5:
+                return Yen5 * 5;
+            case 1:
+                return Yen1 * 1;
+        }
+
+        return 0;
+    }
+    
     public int GetAmount()
     {
         return ( Yen500 * 500 ) + ( Yen100 * 100 )
@@ -83,12 +109,13 @@ public class Exercise6
             MyCase.AddCoins( kind, count );
         }
 
-        System.out.println( "500円は" + MyCase.GetCount( 500 ) + "枚" );
-        System.out.println( "100円は" + MyCase.GetCount( 100 ) + "枚" );
-        System.out.println( "50円は" + MyCase.GetCount( 50 ) + "枚" );
-        System.out.println( "10円は" + MyCase.GetCount( 10 ) + "枚" );
-        System.out.println( "5円は" + MyCase.GetCount( 5 ) + "枚" );
-        System.out.println( "1円は" + MyCase.GetCount( 1 ) + "枚" );
+        System.out.println( "500円は" + MyCase.GetCount( 500 ) + "枚、" + MyCase.GetAmount( 500 ) + "円" );
+        System.out.println( "100円は" + MyCase.GetCount( 100 ) + "枚" + MyCase.GetAmount( 100 ) + "円" ) ;
+        System.out.println( "50円は" + MyCase.GetCount( 50 ) + "枚" + MyCase.GetAmount( 50 ) + "円" );
+        System.out.println( "10円は" + MyCase.GetCount( 10 ) + "枚" + MyCase.GetAmount( 10 ) + "円" );
+        System.out.println( "5円は" + MyCase.GetCount( 5 ) + "枚" + MyCase.GetAmount( 5 ) + "円" );
+        System.out.println( "1円は" + MyCase.GetCount( 1 ) + "枚" + MyCase.GetAmount( 1 ) + "円" );
+        System.out .println("全部で" + MyCase.GetCount() + "枚");
         System.out.println( "総額は" + MyCase.GetAmount() + "円" );
     }
 }
