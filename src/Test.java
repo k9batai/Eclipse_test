@@ -7,6 +7,8 @@ public class Test {
 	    // インデックス番号が0の要素を出力してください
 	    System.out.println(names[0]);
 	    
+	    names[2] = "子犬";
+	    
 	    // インデックス番号が2の要素を出力してください
 	    System.out.println(names[2]);
 	}
