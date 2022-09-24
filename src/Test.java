@@ -16,7 +16,11 @@ public class Test {
 	    
 	    // for文を用いて、「私の名前は◯◯です」と出力してください
 	    for (int i = 0; i < names2.length; i++) {
-	      System.out.println("私の名前は" + names2[i] + "です");
+	    	System.out.println("私の名前は" + names2[i] + "です");
+	    }	
+	      
+	    for (String name: names2) {
+	    	System.out.println("私の名前は" + name + "です");  
 	    }
 	}
 }
