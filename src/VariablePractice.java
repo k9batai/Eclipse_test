@@ -70,6 +70,27 @@ public class VariablePractice {
         if (value % 5 == 0) {
         	System.out.println("5の倍数です");
         }
+        
+        
+        // 年齢変数の宣言と初期化
+        int age = 12;        // ←値を変更しながら実行
+        System.out.println("年齢：" + age);
+        // if文の開始
+        if (20 <= age) {
+        	System.out.println("成人です");
+        } else if (age < 20 && 0 <= age) {
+        	System.out.println("未成年です");
+        	
+        	 if (age < 6 || 14 < age) {
+             	System.out.println("今は義務教育を受けていません");
+             } else {
+             	System.out.println("今は義務教育を受けています");
+             }
+        	 
+        } else {
+        	System.out.println("エラー");
+        }
+        
 	}	
 
 }
