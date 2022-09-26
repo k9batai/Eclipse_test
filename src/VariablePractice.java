@@ -91,6 +91,26 @@ public class VariablePractice {
         	System.out.println("エラー");
         }
         
+        double height = 170.0;        // ←値を変更しながら実行
+        double weight = 88.0;         // ←値を変更しながら実行
+        System.out.println("身長：" + height + "（cm）");
+        System.out.println("体重：" + weight + "（kg）");
+        // BMI値の算出と表示
+        double bmi = weight / ( (height / 100) * (height / 100) );
+        System.out.println(bmi);
+        
+        if (26.5 <= bmi) {
+        	System.out.println("肥満です");
+        } else if (24 <= bmi && bmi < 25.5) {
+        	System.out.println("太り気味です");
+        } else if (20 <= bmi && bmi < 24) {
+        	System.out.println("普通です");
+        } else if (0 <= bmi && bmi <20 ) {
+        	System.out.println("スリムです");
+        } else {
+        	System.out.println("エラーです");
+        }
+        
 	}	
 
 }
