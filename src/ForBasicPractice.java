@@ -21,5 +21,11 @@ public class ForBasicPractice {
             }
             System.out.println();
         }
+        
+        int x = 1;
+        while (x <= 1000) {
+        	System.out.println(x);
+        	x *= 2;
+        }
     }
 }
