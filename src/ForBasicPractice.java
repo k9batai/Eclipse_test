@@ -27,5 +27,7 @@ public class ForBasicPractice {
         	System.out.println(x);
         	x *= 2;
         }
+        
+        
     }
 }
