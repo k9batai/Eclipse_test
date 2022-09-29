@@ -24,6 +24,23 @@ public class Exam17 {
 			System.out.println(discount_rate *= 1.5);
 		}
 		
+		//変数宣言
+	     int money = 3000;
+	     int meal_price = 2300;
+	     int current_money = money - meal_price;
+	     
+	     //宣言した変数を利用して表示
+	     System.out.println("残金は" + current_money + "円です");
+	 
+	     //条件分岐
+	     if(current_money >= money * 0.6){
+	        System.out.println("残金には余裕があります");
+	     }else if(current_money >= money * 0.3){
+	        System.out.println("残金が少なくなっています");
+	     }else{
+	        System.out.println("残金があと少しです");
+	     }
+		
 		
 		
 		
