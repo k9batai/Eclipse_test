@@ -43,10 +43,14 @@ public class Exam17 {
 	     
 	     int[] numbers = {10,18,33,92,47};
 	     int result = 1;
-	     for (int i = 0; i < numbers.length; i++) {
-	    	 result *= numbers[i];
+	     int power = 3;
+	     for(int i = 0; i < numbers.length; i++) {
+	    	 result = 1;
+	    	 for(int j = 0; j < power; j++) {
+	    		 result *= numbers[i];
+	    	 }
+	    	 System.out.println(result + " ");
 	     }
-	     System.out.println(result);
 		
 		
 		
