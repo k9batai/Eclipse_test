@@ -15,8 +15,19 @@ public class Exam17 {
 		
 		int price2 = 9260;
 		int discount_rate = 33;
+		char day_of_week = '土';
+		int day_of_month = 1;
 		
-		System.out.println(price2 * discount_rate * 0.01 );
+		if (day_of_week == '土') {
+			System.out.println(discount_rate *= 1.2);
+		} else if (day_of_week == '土' && (day_of_month == 5 || day_of_month == 15 || day_of_month == 25) ){
+			System.out.println(discount_rate *= 1.5);
+		}
+		
+		
+		
+		
+		
 	}
 
 }
