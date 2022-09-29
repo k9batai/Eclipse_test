@@ -12,6 +12,11 @@ public class Exam17 {
 		int tax_rate = 8;
 		
 		System.out.println( (int)(price + (price * tax_rate * 0.01) ) );
+		
+		int price2 = 9260;
+		int discount_rate = 33;
+		
+		System.out.println(price2 * discount_rate * 0.01 );
 	}
 
 }
