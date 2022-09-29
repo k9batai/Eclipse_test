@@ -1,4 +1,4 @@
-public class ClassPractice {
+public class ClassFirstPractice {
     public static void main(String[] args) {
 
         // 1匹目のペットオブジェクトの生成
@@ -26,5 +26,43 @@ public class ClassPractice {
     }
 }
 
-
 // ここにPetクラスを作成してください。
+// Petクラス
+class Pet {
+	 // タイプ
+    private String type;
+    // 名前
+    private String name;
+    // 年齢
+    private byte age;
+    // 性別（true:メス false:オス）
+    private boolean gender;
+    // 種類を設定する
+    public void setType(String type) {
+        this.type = type;
+    }
+    // 名前を設定する
+    public void setName(String name) {
+        this.name = name;
+    }
+    // 年齢を設定する
+    public void setAge(byte age) {
+        this.age = age;
+    }
+    // 性別を設定する
+    public void setGender(boolean gender) {
+        this.gender = gender;
+    }
+    // 紹介文を取得する
+    public String getIntroduction() {
+        String tmp;
+        tmp = type + "の" + name + "は";
+        if(gender) {
+            tmp += "メス";
+        } else {
+            tmp += "オス";
+        }
+        tmp += "で" + age + "歳です。";
+        return tmp;
+    }
+}
