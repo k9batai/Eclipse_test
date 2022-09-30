@@ -10,6 +10,12 @@ public class Main {
     	} else {
     		System.out.println("割り切れません。");
     	}
+    	
+    	String[] arrays1 = {"a", "b", "c"};
+		System.out.println(getFirstString(arrays1));
+ 
+		String[] arrays2 = {};
+		System.out.println(getFirstString(arrays2));
 
     }
 
@@ -24,6 +30,13 @@ public class Main {
     		return true;
     	}
     	return false;
+    }
+    
+    private static String getFirstString(String[] arrays) {
+    	if(arrays == null || arrays.length == 0) {
+    		return null;
+    	}
+    	return arrays[0];
     }
 
 }
