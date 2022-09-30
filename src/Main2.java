@@ -4,6 +4,16 @@ public class Main2 {
 		Robot exRobot = new Robot();
 		exRobot.color = "青";
 		System.out.println(exRobot.color);
+		exRobot.hello();
+		exRobot.getColor();
+		
+		Robot exRobot2 = new Robot();
+		exRobot2.color = "赤";
+		exRobot2.getColor();
+		
+		Robot exRobot3 = new Robot();
+		exRobot3.color = "黄色";
+		exRobot3.getColor();
 	}
 }
 
