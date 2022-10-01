@@ -10,7 +10,7 @@ public class Main {
         System.out.println("社員名：" + employee.getName());
         
         // 1匹目のペットオブジェクトの生成
-        Pet pet1 = new Pet();
+        Pet2 pet1 = new Pet2();
         
         // 1匹目のペットデータを設定
         pet1.setType("犬");
@@ -19,7 +19,7 @@ public class Main {
         pet1.setGender(true);
         
         // 2匹目のペットオブジェクトの生成
-        Pet pet2 = new Pet();
+        Pet2 pet2 = new Pet2();
 
         // 2匹目のペットのデータを設定
         pet2.setType("猫");
@@ -51,6 +51,37 @@ class Employee {
 	}
 }
 
-class Pet {
+class Pet2 {
+	private String type;
+	private String name;
+	private byte age;
+	private boolean gender;
 	
+	public void setType(String type) {
+		this.type = type;
+	}
+	
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public void setAge(byte age) {
+		this.age = age;
+	}
+	
+	public void setGender(boolean gender) {
+		this.gender = gender;
+	}
+	
+	public String getIntroduction() {
+        String tmp;
+        tmp = type + "の" + name + "は";
+        if(gender) {
+            tmp += "メス";
+        } else {
+            tmp += "オス";
+        }
+        tmp += "で" + age + "歳です。";
+        return tmp;
+    }
 }
