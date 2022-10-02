@@ -1,11 +1,24 @@
-import java.util.Scanner;
+class Car{
+    //フィールド
+    private int fuel;           //燃料
+    private int consumption;    //燃費
 
-public class Main {
+    //コンストラクタ（初期値を設定）
+    Car(int fuel,int consumption){
+        this.fuel = fuel;
+        this.consumption = consumption;
+    }
 
-  public static void main(String[] args) {
-    Scanner scan = new Scanner(System.in);
-    String inputStr = scan.next();//ここでコンソールに入力したものを取得
-    System.out.println("コンソールに入力された文字は、「" + inputStr + "」です。");
-  }
+    //メソッド
+    //運転
+    public void run(int mileage){
+        this.fuel -= mileage / consumption;
+    }
 
+    //燃料計の表示
+    public void dispFuelGauge(){
+        System.out.println("残量：" + this.fuel + "ℓ");
+        System.out.println("残量：" + this.fuel + "L");
+
+    }
 }
