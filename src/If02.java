@@ -1,16 +1,10 @@
-
-public class If02 {
-	public static void main(String[] args) {
-		hello("ジョン", 30);
-		dog("ぽち");
-	}
-	
-	public static void hello(String name, int age) {
-		// "Hello World"を、"Hello Java"に書き換えてください
-		System.out.println(name + "です" + age + "歳です。");
-	}
-	
-	public static void dog(String name) {
-		System.out.println("愛犬の名前は" + name + "です");
-	}
+class If02 {
+    static String stafield = "これは静的フィールドです";
+    static void Introduction(){
+        System.out.println("これは静的メソッドです");
+    }
+    public static void main(String[] args) {
+        System.out.println(If02.stafield);
+        If02.Introduction();
+    }
 }
