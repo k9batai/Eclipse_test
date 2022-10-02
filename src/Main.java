@@ -1,3 +1,13 @@
+class Main {
+    public static void main(String[] args) {
+        //インスタンス化
+
+        Car car = new Car(70,10); 		//燃料70Lℓ、燃費10km/Lを設定
+        car.run(50);			//50km走行する
+        car.dispFuelGauge();    	//燃料計を表示
+    }
+}
+
 class Car{
     //フィールド
     private int fuel;           //燃料
@@ -17,7 +27,6 @@ class Car{
 
     //燃料計の表示
     public void dispFuelGauge(){
-        System.out.println("残量：" + this.fuel + "ℓ");
         System.out.println("残量：" + this.fuel + "L");
 
     }
