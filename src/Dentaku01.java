@@ -17,15 +17,12 @@ class Dentaku01{
 class Robot1{
 	  public static void main(String[] args){
 	    Robot1 robot = new Robot1();
-	    robot.hello();
-	    robot.bye();
+	    robot.greeting("hello");
+	    robot.greeting("bye");
 	  }
 
-	  void hello(){
-	    System.out.println("Hello");
+	  void greeting(String msg){
+	    System.out.println(msg);
 	  }
 
-	  void bye(){
-	    System.out.println("Bye");
-	  }
 	}
