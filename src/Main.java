@@ -1,34 +1,24 @@
 class Main {
-    public static void main(String[] args) {
-        //インスタンス化
-
-        Car car = new Car(70,10); 		//燃料70Lℓ、燃費10km/Lを設定
-        car.run(50);			//50km走行する
-        car.dispFuelGauge();    	//燃料計を表示
+	public static void main(String[] args) {
+        // シェフオブジェクトの生成
+        Chef chef = new Chef();
+        // 食材オブジェクトの生成
+        Egg egg = new Egg();
+        Rice rice = new Rice();
+        Milk milk = new Milk();
+        Cheese cheese = new Cheese();
+        // シェフがフルコースを調理します
+        System.out.println("1品目は" + chef.cook(egg, cheese) + "です");
+        System.out.println("2品目は" + chef.cook(rice, egg) + "です");
+        System.out.println("3品目は" + chef.cook(rice, cheese) + "です");
+        System.out.println("4品目は" + chef.cook(milk, egg) + "です");
     }
 }
 
-class Car{
-    //フィールド
-    private int fuel;           //燃料
-    private int consumption;    //燃費
 
-    //コンストラクタ（初期値を設定）
-    Car(int fuel,int consumption){
-        this.fuel = fuel;
-        this.consumption = consumption;
-    }
-
-    //メソッド
-    //運転
-    public void run(int mileage){
-        this.fuel -= mileage / consumption;
-    }
-
-    //燃料計の表示
-    public void dispFuelGauge(){
-        System.out.println("残量：" + this.fuel + "L");
-
-    }
-}
-
+//各種食材クラス
+class Egg{}
+class Rice{}
+class Milk{}
+class Cheese{}
+//ここにChefクラスを作成してください
