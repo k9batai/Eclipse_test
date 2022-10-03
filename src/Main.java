@@ -21,4 +21,22 @@ class Egg{}
 class Rice{}
 class Milk{}
 class Cheese{}
-//ここにChefクラスを作成してください
+//Chefクラス
+class Chef {
+ // 調理メソッド
+ public String cook(Egg egg, Cheese cheese) {
+     return "スクランブルエッグ";
+ }
+ // 調理メソッド
+ public String cook(Rice rice, Egg egg) {
+     return "オムライス";
+ }
+ // 調理メソッド
+ public String cook(Rice rice, Cheese cheese) {
+     return "リゾット";
+ }
+ // 調理メソッド
+ public String cook(Milk milk, Egg egg) {
+     return "プディング";
+ }
+}
