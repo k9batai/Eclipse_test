@@ -14,3 +14,34 @@ public class VariablePractice {
     }
 
 }
+
+class Car {
+	private String type;
+	private int number;
+	private double gasoline;
+	
+	public Car(String type, int number, double gasoline) {
+		this.type = type;
+		this.number = number;
+		this.gasoline = gasoline;
+	}
+	
+	public Car(String type, int number) {
+		this(type, number, 5.0);
+	}
+	
+	public void run(double runGasoline ) {
+		if(runGasoline >= gasoline) {
+			System.out.println("ナンバー" + number+ "の" + type + "はガソリン不足のため走行できません");
+		} else {
+			System.out.println("ナンバー" + number + "の" + type +
+                    "はガソリン" + runGasoline + "リットル分走行しました");
+            // 走行分だけガソリンを減らす
+            gasoline -= runGasoline;
+		}
+	}
+	
+	public void showInfo() {
+		System.out.println("車種：" + type + "ナンバー：" + number + "ガソリン：" + gasoline);
+	}
+}
