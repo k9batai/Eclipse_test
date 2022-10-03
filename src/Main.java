@@ -12,6 +12,20 @@ class Main {
         System.out.println("2品目は" + chef.cook(rice, egg) + "です");
         System.out.println("3品目は" + chef.cook(rice, cheese) + "です");
         System.out.println("4品目は" + chef.cook(milk, egg) + "です");
+        
+        // Squareクラスのオブジェクトを作成
+        Square square = new Square(4.5, 2.8);
+        // 四角形の情報を出力
+        square.inform();
+        // 面積の表示
+        System.out.println("この四角形の面積は" + square.getArea() + "です。");
+        // 幅を3.0増加させる
+        square.addWidth(3.0);
+        System.out.println();
+        // 四角形の情報を出力
+        square.inform();
+        // 面積の表示
+        System.out.println("この四角形の面積は" + square.getArea() + "です。");
     }
 }
 
@@ -40,3 +54,4 @@ class Chef {
      return "プディング";
  }
 }
+
