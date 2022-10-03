@@ -1,145 +1,16 @@
 
 public class VariablePractice {
 	public static void main(String[] args) {
-		int price;
-		price = 130; 
-		
-		int num = 6;
-		
-		int allNum = price * num;
-		
-		System.out.println(price);
-		
-		System.out.println(num);
-		
-		System.out.println(allNum);
-		
-		// 5 と 6 と 7 を足した合計に 8 を掛けた値は？
-        System.out.println((5 + 6 + 7)* 8);
-        // 7 と 8 を足した値を 5 で割った値に、
-        // 6 から 4 を引いた値に 2 を掛けた値を足した値は？
-        System.out.println((7 + 8)/ 5 + (6 - 4)* 2);
-        // 1000 を 7 で割ったあまりは？
-        System.out.println(1000 % 7);
-        // 6 を 5 で割った値を、さらに 2 で割った正確な値は？
-        System.out.println(6.0 / 5 / 2);
-        // アルファベットの大文字 'A' に 32 を足した文字は？
-        System.out.println( (char)('A' + 32) );
-        
-        // short型の変数 s1 を宣言し、65 を代入してください。
-        short s1 = 65;
-        
-        // s1 の値を出力してください。
-        System.out.println(s1);
-        
-        // byte型の変数 b を宣言し、変数 s1 の値を代入してください。
-        byte b = (byte)s1;
-        
-        // b の値を出力してください。
-        System.out.println(b);
-        
-        // char型の変数 c を宣言し、変数 b の値を代入してください。
-        char c = (char)b;
-        
-        // c の値を出力してください。
-        System.out.println(c);
-        
-        // short型の変数 s2 を宣言し、変数 s1 と b を足した値を代入してください。
-        short s2 = (short)(s1 + b);
-        
-        // s2 の値を出力してください。
-        System.out.println(s2);
-        
-        
-        
-     // 整数変数の宣言と初期化
-        int value = 12;        // ←値を変更しながら実行
-        System.out.println("value：" + value);
-        // if文の開始
-        if (value % 2 == 0) {
-        	System.out.println("偶数です");	
-        } else {
-        	System.out.println("奇数です");
-        }
-        if (value % 3 == 0) {
-        	System.out.println("3の倍数です");
-        } 
-        if (value % 4 == 0) {
-        	System.out.println("4の倍数です");
-        }
-        if (value % 5 == 0) {
-        	System.out.println("5の倍数です");
-        }
-        
-        
-        // 年齢変数の宣言と初期化
-        int age = 12;        // ←値を変更しながら実行
-        System.out.println("年齢：" + age);
-        // if文の開始
-        if (20 <= age) {
-        	System.out.println("成人です");
-        } else if (age < 20 && 0 <= age) {
-        	System.out.println("未成年です");
-        	
-        	 if (age < 6 || 14 < age) {
-             	System.out.println("今は義務教育を受けていません");
-             } else {
-             	System.out.println("今は義務教育を受けています");
-             }
-        	 
-        } else {
-        	System.out.println("エラー");
-        }
-        
-        double height = 170.0;        // ←値を変更しながら実行
-        double weight = 88.0;         // ←値を変更しながら実行
-        System.out.println("身長：" + height + "（cm）");
-        System.out.println("体重：" + weight + "（kg）");
-        // BMI値の算出と表示
-        double bmi = weight / ( (height / 100) * (height / 100) );
-        System.out.println(bmi);
-        
-        if (26.5 <= bmi) {
-        	System.out.println("肥満です");
-        } else if (24 <= bmi && bmi < 25.5) {
-        	System.out.println("太り気味です");
-        } else if (20 <= bmi && bmi < 24) {
-        	System.out.println("普通です");
-        } else if (0 <= bmi && bmi <20 ) {
-        	System.out.println("スリムです");
-        } else {
-        	System.out.println("エラーです");
-        }
-        
-        
-        int month = 1;        // ←値を変更しながら実行
-        System.out.println(month + "月");
-        // switch文の開始
-        switch(month) {
-	        case 1:
-	        case 3:
-	        case 5:
-	        case 7:
-	        case 8:
-	        case 10:
-	        case 12:
-	            System.out.println(month + "月は31日まであります");
-	            break;
-	        case 4:
-	        case 6:
-	        case 9:
-	        case 11:
-	            System.out.println(month + "月は30日まであります");
-	            break;
-	        case 2:
-	            System.out.println("2月は28、または29日まであります");
-	            break;
-	        default :
-	            System.out.println("エラー");
-	            break;
-        			
-        }
-        
-	}	
+        // 1台目の車インスタンス生成
+        Car car1 = new Car("トント", 1234, 10.0);
+        // 2台目の車インスタンス生成
+        Car car2 = new Car("ファット", 6789);
+        // 2台の車を走行させる
+        car1.run(7.0);
+        car2.run(7.0);
+        // 2台の車の情報を出力
+        car1.showInfo();
+        car2.showInfo();
+    }
 
 }
