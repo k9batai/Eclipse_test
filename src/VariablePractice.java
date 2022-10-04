@@ -1,4 +1,3 @@
-
 public class VariablePractice {
 	public static void main(String[] args) {
         // 1台目の車インスタンス生成
@@ -13,23 +12,23 @@ public class VariablePractice {
         car2.showInfo();
         
      // ロボット総生産数の表示
-        System.out.println("ロボット総生産数：" + Robot.getTotal());
+        System.out.println("ロボット総生産数：" + Robot2.getTotal());
         // 5体のロボットオブジェクトを作成
         // （6体目は保留）
-        Robot[] robots = {
-                new Robot("RX"),
-                new Robot("PZ"),
-                new Robot("SS"),
-                new Robot("FG"),
-                new Robot("VC"),
+        Robot2[] robots = {
+                new Robot2("RX"),
+                new Robot2("PZ"),
+                new Robot2("SS"),
+                new Robot2("FG"),
+                new Robot2("VC"),
                 null
         };
         // ロボット総生産数の表示
-        System.out.println("ロボット総生産数：" + Robot.getTotal());
+        System.out.println("ロボット総生産数：" + Robot2.getTotal());
         // 6体目のロボットオブジェクトを作成
-        robots[5] = new Robot("SUPER-Z");
+        robots[5] = new Robot2("SUPER-Z");
         // ロボット総生産数の取得
-        System.out.println("ロボット総生産数：" + Robot.getTotal());
+        System.out.println("ロボット総生産数：" + Robot2.getTotal());
         System.out.println();
         // 6体のロボットの情報を表示
         for(int i = 0; i < robots.length; i++) {
@@ -68,4 +67,25 @@ class Car {
 	public void showInfo() {
 		System.out.println("車種：" + type + "ナンバー：" + number + "ガソリン：" + gasoline);
 	}
+}
+
+class Robot2 {
+	private int id;
+	private String  name;
+	private static int total;
+	
+	public Robot2(String name) {
+		this.name = name;
+		
+		total ++;
+		this.id = total;
+	}
+	
+	public static int getTotal() {
+		return total;
+	}
+	
+	public void introduce() {
+        System.out.println("ID：" + id + " NAME：" + name);
+    }
 }
