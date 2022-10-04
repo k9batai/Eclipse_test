@@ -4,6 +4,12 @@ public class Main {
         Pitcher p = new Pitcher("山田", 99, 0.09, 2.13);
         // 投手の紹介
         p.introduce();
+        
+        
+     // Magazineクラスのオブジェクトを生成
+        Magazine magazine = new Magazine("東京Runner", 650, "上野彩");
+        // 雑誌の内容紹介メソッドの呼び出し
+        magazine.show();
     }
 }
 // 野球選手クラス
@@ -32,4 +38,26 @@ class Pitcher extends BaseballPlayer {
 	    System.out.println("打率　：" + battingAverage);
 	    System.out.println("防御率：" + era);
 	}
+}
+
+
+//Bookクラス
+class Book {
+ // タイトル
+ private String title;
+ // 価格
+ private int price;
+ // コンストラクタ
+ public Book(String title, int price) {
+     this.title = title;
+     this.price = price;
+ }
+ // タイトル取得メソッド
+ public String getTitle() {
+     return title;
+ }
+ // 価格取得メソッド
+ public int getPrice() {
+     return price;
+ }
 }
