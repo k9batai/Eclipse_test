@@ -8,23 +8,40 @@ public class Test {
         // 目覚まし時計オブジェクトの生成
         AlarmClock c2 = new AlarmClock(15, 45, 20, 6, 30);
         // 目覚まし時計の情報の表示
-        c2.showData()
+        c2.showData();
     }
 }
 // 時計クラス
 class Clock {
     // 時分秒
     private int hour;
-    private int minute;　
+    private int minute;
     private int second;
     // コンストラクタ
     public Clock(int hour, int minute, int second) {
         this.hour = hour;
         this.minute = minute;
-        this.second = secon;
+        this.second = second;
     }
     // 情報表示メソッド
     public void showData() {
         System.out.println("ただいまの時刻：" + hour + "時" + minute + "分" + second + "秒");
     }
+}
+
+class AlarmClock extends Clock {
+	private int alarmHour;
+	private int alarmMinute;
+	
+	public AlarmClock(int hour, int minute, int second, int alarmHour, int alarmMinute) {
+		super(hour, minute, second);
+		this.alarmHour = alarmHour;
+		this.alarmMinute = alarmMinute;
+	}
+	
+	@Override
+	public void showData() {
+		super.showData();
+		System.out.println("アラーム設定時刻：" + alarmHour + "時" + alarmMinute + "分");
+	}
 }
