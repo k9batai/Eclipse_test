@@ -53,3 +53,63 @@ class Bird extends Animal2 {
      System.out.println("ぴよぴよ");
  }
 }
+
+//サッカー選手抽象クラス
+abstract class SoccerPlayer {
+ // 選手名
+ private String name;
+ // 背番号
+ private int uniformNumber;
+ // コンストラクタ
+ public SoccerPlayer(String name, int uniformNumber) {
+     this.name = name;
+     this.uniformNumber = uniformNumber;
+ }
+ // 名前取得メソッド
+ public String getName() {
+     return name;
+ }
+ // ボールを蹴るメソッド
+ public void kickBall() {
+     System.out.println(name + "はボールを蹴りました");
+ }
+ // ボールを受け止めるメソッド
+ public void catchBall() {
+     System.out.println(name + "はボールを足で受け止めました");
+ }
+ // ポジション名取得中傷メソッド
+ public abstract String getPositionName();
+ @Override
+ public String toString() {
+     return getPositionName() + " " + name + " 背番号" + uniformNumber;
+ }
+}
+//センターフォワードクラス
+class CenterForward extends SoccerPlayer {
+ public static final String POSITION_NAME = "センターフォワード";
+ // コンストラクタ
+ public CenterForward(String name, int uniformNumber) {
+     super(name, uniformNumber);
+ }
+ // ポジション名取得メソッド（実装）
+ public String getPositionName() {
+     return POSITION_NAME;
+ }
+}
+//ここにゴールキーパークラスを作成してください
+class GoalKeeper extends SoccerPlayer {
+ public static final String POSITION_NAME = "ゴールキーパー";
+ // コンストラクタ
+ public GoalKeeper(String name, int uniformNumber) {
+     super(name, uniformNumber);
+ }
+ // ポジション名取得メソッド（実装）
+ public String getPositionName() {
+     return POSITION_NAME;
+ }
+ // ボールを受け止めるメソッド（オーバーライド）
+ @Override
+ public void catchBall() {
+     System.out.println(getName() + "はボールを手で受け止めました");
+ }
+}
