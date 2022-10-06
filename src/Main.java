@@ -7,6 +7,10 @@ public class Main{
          String msg = "こんにちは、Java";
          // メソッドの呼び出し
          printMessage(msg, times);
+         
+         int i = 10;
+         executeCalcSigma(i);    // メソッドを呼び出し 
+         executeCalcSigma(30);  // 別の引数でメソッドを呼び出し
     }
     
     static void returnTest(int i){
@@ -23,5 +27,13 @@ public class Main{
         for(int j = 0; j < i; j++){
             System.out.println(str);
         }
+    }
+    
+    static void executeCalcSigma(int i){
+        int ans = 0;
+        for(int j = i; j != 0; j--){
+            ans += j;
+        }
+        System.out.println("答えは : " + ans +"です");
     }
 }
