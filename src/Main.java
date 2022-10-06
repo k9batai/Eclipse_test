@@ -7,5 +7,12 @@ public class Main{
         int a = Integer.parseInt(str); //文字列の"100"を整数の100に変換
         int ans = a + 20; //i はstrの表す文字列と同じ意味の数値が入っている
         System.out.println("足し算の結果 : " + ans);
+        
+        printHello();
+    }
+    
+    static void printHello( ){
+        String msg = "メソッドが呼ばれました";
+        System.out.println(msg);
     }
 }
