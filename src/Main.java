@@ -9,10 +9,16 @@ public class Main{
         System.out.println("足し算の結果 : " + ans);
         
         printHello();
+        String msg = "こんにちは、Java";
+        printMessage(msg);  // メソッドの呼び出し
     }
     
     static void printHello( ){
         String msg = "メソッドが呼ばれました";
         System.out.println(msg);
+    }
+    
+    static void printMessage(String greeting){
+        System.out.println("メソッドから出力 : " + greeting);
     }
 }
