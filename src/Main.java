@@ -15,6 +15,10 @@ public class Main{
          int ret, data = 10;
          ret = max(data, 30);
          System.out.println("戻り値は : " + ret);
+         
+         double result, value = 12.3;
+         result = max(value, 98.7);
+         System.out.println("戻り値は : " + result);
     }
     
     static void returnTest(int i){
@@ -47,4 +51,11 @@ public class Main{
         }
         return num2;
     }
+    
+    static double max(double num1, double num2){
+        if(num1 > num2){
+            return num1;
+        }
+        return num2;
+    }    
 }
