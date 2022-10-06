@@ -11,6 +11,10 @@ public class Main{
          int i = 10;
          executeCalcSigma(i);    // メソッドを呼び出し 
          executeCalcSigma(30);  // 別の引数でメソッドを呼び出し
+         
+         int ret, data = 10;
+         ret = max(data, 30);
+         System.out.println("戻り値は : " + ret);
     }
     
     static void returnTest(int i){
@@ -35,5 +39,12 @@ public class Main{
             ans += j;
         }
         System.out.println("答えは : " + ans +"です");
+    }
+    
+    static int max(int num1, int num2){
+        if(num1 > num2){
+            return num1;
+        }
+        return num2;
     }
 }
