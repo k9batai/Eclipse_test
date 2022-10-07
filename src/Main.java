@@ -11,14 +11,10 @@ public class Main{
         // 引数も戻り値もないメソッドの呼び出し
         printHello( );
         
-        int a = executeCalcSigma(10); // メソッドを呼び出し 
-        System.out.println("a = " + a);
-        int b = executeCalcSigma(20); // 別の引数でメソッドを呼び出し
-        System.out.println("b = " + b);
-        int c = executeCalcSigma(30);
-        System.out.println("c = " + c);
-        int d = a + b + c;
-        System.out.println("a + b + c = " + d);
+        for( int i = 1; i < 20; i++ ){
+            int ans = executeCalcSigma(i);
+            System.out.println(ans);
+        }
     }
     static String mojiretuRenketu(String str, int i){
         String ret = "";
