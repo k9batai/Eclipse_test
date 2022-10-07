@@ -28,6 +28,11 @@ public class VariablePractice {
             System.out.println(s);
         }
     }
+    
+  //明確に引数を指定したメソッドの定義
+    public static void variableArgs2(int num, String str){
+        System.out.println("引数を明確に定義したメソッドがよびだされました");
+    }
 
 }
 
