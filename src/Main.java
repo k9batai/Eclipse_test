@@ -6,6 +6,9 @@ public class Main{
         taro.setHeight(175.5);  
        
         taro.selfIntroduce( );
+        
+        Human jiro = new Human("次郎", 28, 177.3);
+        jiro.selfIntroduce( );
     }
 }  
 
@@ -16,6 +19,13 @@ class Human {
     
     public Human( ){
         System.out.println("コンストラクタが呼ばれました！");
+    }
+    
+    public Human(String n, int a, double h){
+        System.out.println("引数ありコンストラクタが呼ばれました！");
+        name = n;
+        age = a;
+        height = h;
     }
     
     public void setName(String n){
