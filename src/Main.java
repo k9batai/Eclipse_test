@@ -14,6 +14,10 @@ class Human {
     private int age;           //フィールド
     private double height;     //フィールド
     
+    public Human( ){
+        System.out.println("コンストラクタが呼ばれました！");
+    }
+    
     public void setName(String n){
         name = n;
     }
