@@ -1,11 +1,10 @@
 public class Main {
-	public static void main(String[ ] args){
-        int[ ] a = new int[3];
-        a[0] = 9;
-        a[1] = 4;
-        a[2] = 5;
-        for(int i = 0; i < 3; i++)
-            System.out.println(a[i]);
+	public static void main(String[ ] args){String[ ] a = new String[3];
+	    a[0] = "鈴木 隆弘";
+	    a[1] = "加藤 博一";
+	    a[2] = "高木 豊";
+	    for(int i = 0; i < 3; i++)
+	        System.out.println(a[i]);
     }
 }  
 
