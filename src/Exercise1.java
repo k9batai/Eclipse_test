@@ -1,15 +1,24 @@
 public class Exercise1 {
-	public static void main( String[] args ) {
-	    System.out.println( "3の2乗=" + pow2( 3 ) );
-	    System.out.println( "4と9の平均=" + average( 4, 9 ) );
-	}
+	public static void main( String[] args )
+    {
+        Dog2 MyDog = new Dog2();
 
+        MyDog.SetName( "ぽち" );
+        MyDog.ShowProfile();
+    }
+}
 
-	static int pow2( int n ) {
-	    return n * n;
-	}
-	
-	static int average(int x, int y) {
-		return (x + y) / 2;
-	}
+class Dog2
+{
+    private String Name;
+
+    public void SetName( String nm )
+    {
+        Name = nm;
+    }
+
+    public void ShowProfile()
+    {
+        System.out.println( "名前は、" + Name + "です。" );
+    }
 }
