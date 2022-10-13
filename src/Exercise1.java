@@ -4,6 +4,7 @@ public class Exercise1 {
         Dog2 MyDog = new Dog2();
 
         MyDog.SetName( "ぽち" );
+        MyDog.SetAge( 3 );
         MyDog.ShowProfile();
     }
 }
@@ -11,14 +12,20 @@ public class Exercise1 {
 class Dog2
 {
     private String Name;
+    private int Age;
 
     public void SetName( String nm )
     {
         Name = nm;
     }
+    
+    public void SetAge( int ag )
+    {
+        Age = ag;
+    }
 
     public void ShowProfile()
     {
-        System.out.println( "名前は、" + Name + "です。" );
+        System.out.println( "名前は、" + Name + "、" + Age + "歳です。" );
     }
 }
